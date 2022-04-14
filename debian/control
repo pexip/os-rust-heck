@@ -1,0 +1,42 @@
+Source: rust-heck
+Section: rust
+Priority: optional
+Build-Depends: debhelper (>= 12),
+ dh-cargo (>= 25),
+ cargo:native <!nocheck>,
+ rustc:native <!nocheck>,
+ libstd-rust-dev <!nocheck>
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Uploaders:
+ Wolfgang Silbermayr <wolfgang@silbermayr.at>
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/heck]
+Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/heck
+Homepage: https://github.com/withoutboats/heck
+Rules-Requires-Root: no
+
+Package: librust-heck-dev
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ librust-unicode-segmentation-1+default-dev (>= 1.2.0-~~)
+Provides:
+ librust-heck+default-dev (= ${binary:Version}),
+ librust-heck+unicode-dev (= ${binary:Version}),
+ librust-heck+unicode-segmentation-dev (= ${binary:Version}),
+ librust-heck-0-dev (= ${binary:Version}),
+ librust-heck-0+default-dev (= ${binary:Version}),
+ librust-heck-0+unicode-dev (= ${binary:Version}),
+ librust-heck-0+unicode-segmentation-dev (= ${binary:Version}),
+ librust-heck-0.4-dev (= ${binary:Version}),
+ librust-heck-0.4+default-dev (= ${binary:Version}),
+ librust-heck-0.4+unicode-dev (= ${binary:Version}),
+ librust-heck-0.4+unicode-segmentation-dev (= ${binary:Version}),
+ librust-heck-0.4.0-dev (= ${binary:Version}),
+ librust-heck-0.4.0+default-dev (= ${binary:Version}),
+ librust-heck-0.4.0+unicode-dev (= ${binary:Version}),
+ librust-heck-0.4.0+unicode-segmentation-dev (= ${binary:Version})
+Description: Case conversion library - Rust source code
+ This package contains the source for the Rust heck crate, packaged by debcargo
+ for use with cargo and dh-cargo.

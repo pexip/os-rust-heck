@@ -1,0 +1,24 @@
+Test-Command: /usr/share/cargo/bin/cargo-auto-test heck 0.4.0 --all-targets --all-features
+Features: test-name=rust-heck:@
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test heck 0.4.0 --all-targets 
+Features: test-name=librust-heck-dev:default
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test heck 0.4.0 --all-targets --no-default-features --features unicode
+Features: test-name=librust-heck-dev:unicode
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test heck 0.4.0 --all-targets --no-default-features --features unicode-segmentation
+Features: test-name=librust-heck-dev:unicode-segmentation
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test heck 0.4.0 --all-targets --no-default-features
+Features: test-name=librust-heck-dev:
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
