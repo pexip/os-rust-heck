@@ -6,14 +6,16 @@ Build-Depends: debhelper (>= 12),
  cargo:native <!nocheck>,
  rustc:native <!nocheck>,
  libstd-rust-dev <!nocheck>
-Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
-Uploaders:
+Maintainer: Pexip AS <packaging@pexip.com>
+XSBC-Pexip-Original-Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+XSBC-Pexip-Original-Uploaders:
  Wolfgang Silbermayr <wolfgang@silbermayr.at>
 Standards-Version: 4.5.1
 Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/heck]
 Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/heck
 Homepage: https://github.com/withoutboats/heck
 Rules-Requires-Root: no
+XS-Pexip-Upstream: http://deb.debian.org/debian/ bookworm
 
 Package: librust-heck-dev
 Architecture: any
